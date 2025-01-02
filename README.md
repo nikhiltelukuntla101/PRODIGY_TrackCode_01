@@ -1,6 +1,6 @@
 # PRODIGY_TrackCode_01
 
-<h1>Interactive Navigation Menu<.h1>
+<h1>Interactive Navigation Menu</h1>
 This project demonstrates a simple interactive navigation menu with a smooth transition effect on scroll. The menu has a fixed position at the top of the page and changes its appearance (background and shadow) when the user scrolls down. The page contains sections for "Home", "About", "Services", and "Contact", each with a different background color.
 
 Features
