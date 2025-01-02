@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Navigation Menu</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .nav-menu {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: linear-gradient(45deg, #007bff, #00c6ff);
+        padding: 15px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        transition: background-color 0.3s, box-shadow 0.3s;
+      }
+
+      .nav-menu.scrolled {
+        background: linear-gradient(45deg, #0056b3, #0094cc);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .nav-menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .nav-menu ul li {
+        display: inline;
+      }
+
+      .nav-menu ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        padding: 10px 15px;
+        transition: color 0.3s, transform 0.3s;
+      }
+
+      .nav-menu ul li a:hover {
+        color: #ffd700;
+        transform: scale(1.1);
+      }
+
+      .content {
+        margin-top: 80px;
+        padding: 20px;
+      }
+
+      section {
+        height: 100vh;
+        padding: 20px;
+      }
+
+      #home {
+        background: linear-gradient(to right, #6a11cb, #2575fc);
+        color: white;
+      }
+
+      #about {
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+        color: black;
+      }
+
+      #services {
+        background: linear-gradient(to right, #43cea2, #185a9d);
+        color: white;
+      }
+
+      #contact {
+        background: linear-gradient(to right, #00b09b, #96c93d);
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav-menu" id="navMenu">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section id="home">
+      <h1>Home</h1>
+      <p>Welcome to our interactive navigation menu demo.</p>
+    </section>
+
+    <section id="about">
+      <h1>About</h1>
+      <p>Learn more about us and what we offer.</p>
+    </section>
+
+    <section id="services">
+      <h1>Services</h1>
+      <p>Explore the services we provide to meet your needs.</p>
+    </section>
+
+    <section id="contact">
+      <h1>Contact</h1>
+      <p>Get in touch with us today!</p>
+    </section>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        const navMenu = document.getElementById("navMenu");
+        if (window.scrollY > 50) {
+          navMenu.classList.add("scrolled");
+        } else {
+          navMenu.classList.remove("scrolled");
+        }
+      });
+    </script>
+  </body>
+</html>
